@@ -29,3 +29,40 @@
         <h1 class="text-3xl font-bold">বাংলাদেশের বিভাগীয় মানচিত্র</h1>
         <p class="text-sm mt-2 text-green-100">যেকোনো বিভাগে ক্লিক করে বিস্তারিত তথ্য জানুন</p>
     </header>
+    <!-- Main Content Container -->
+    <main class="container mx-auto p-4 flex flex-col md:flex-row gap-6 mt-6">
+
+        <!-- Map Section (Left Side) -->
+        <section class="w-full md:w-1/2 bg-white rounded-xl shadow-lg p-4 flex justify-center items-center">
+            
+            <!-- SVG Map of Bangladesh -->
+            <svg viewBox="0 0 500 600" class="w-full h-auto max-h-[550px]" stroke="#ffffff" stroke-width="2">
+                <g id="bangladesh-map">
+                    <!-- রংপুর -->
+                    <path id="rangpur" class="division-path fill-green-300" onclick="showDetails('rangpur')" d="... রংপুর এর SVG Path এখানে বসবে ..."></path>
+                    
+                    <!-- রাজশাহী -->
+                    <path id="rajshahi" class="division-path fill-green-400" onclick="showDetails('rajshahi')" d="... রাজশাহী এর SVG Path এখানে বসবে ..."></path>
+                    
+                    <!-- ময়মনসিংহ -->
+                    <path id="mymensingh" class="division-path fill-green-300" onclick="showDetails('mymensingh')" d="... ময়মনসিংহ এর SVG Path এখানে বসবে ..."></path>
+                    
+                    <!-- সিলেট -->
+                    <path id="sylhet" class="division-path fill-green-500" onclick="showDetails('sylhet')" d="... সিলেট এর SVG Path এখানে বসবে ..."></path>
+                    
+                    <!-- ঢাকা -->
+                    <path id="dhaka" class="division-path fill-green-600" onclick="showDetails('dhaka')" d="... ঢাকা এর SVG Path এখানে বসবে ..."></path>
+                    
+                    <!-- খুলনা -->
+                    <path id="khulna" class="division-path fill-green-400" onclick="showDetails('khulna')" d="... খুলনা এর SVG Path এখানে বসবে ..."></path>
+                    
+                    <!-- বরিশাল -->
+                    <path id="barishal" class="division-path fill-green-500" onclick="showDetails('barishal')" d="... বরিশাল এর SVG Path এখানে বসবে ..."></path>
+                    
+                    <!-- চট্টগ্রাম -->
+                    <path id="chattogram" class="division-path fill-green-700" onclick="showDetails('chattogram')" d="... চট্টগ্রাম এর SVG Path এখানে বসবে ..."></path>
+                </g>
+            </svg>
+
+        </section>
+    </body>
