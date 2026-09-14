@@ -107,4 +107,44 @@
         </section>
 
     </main>
-    </body>
+    <!-- JavaScript Section -->
+    <script>
+        // 8 Divisions Data
+        const divisionData = {
+            dhaka: { name: "ঢাকা বিভাগ", est: "১৮২৯ সাল", distCount: "১৩ টি", area: "২০,৫৯৩ বর্গ কিমি", pop: "৪,৪২,১৫,১০৭ জন", dists: "ঢাকা, গাজীপুর, কিশোরগঞ্জ, মানিকগঞ্জ, মুন্সীগঞ্জ, নারায়ণগঞ্জ, নরসিংদী, টাঙ্গাইল, ফরিদপুর, গোপালগঞ্জ, মাদারীপুর, রাজবাড়ী, শরীয়তপুর।" },
+            chattogram: { name: "চট্টগ্রাম বিভাগ", est: "১৮২৯ সাল", distCount: "১১ টি", area: "৩৩,৯০৯ বর্গ কিমি", pop: "৩,৩২,০২,৩২৬ জন", dists: "চট্টগ্রাম, কক্সবাজার, বান্দরবান, খাগড়াছড়ি, রাঙ্গামাটি, নোয়াখালী, ফেনী, লক্ষ্মীপুর, কুমিল্লা, চাঁদপুর, ব্রাহ্মণবাড়িয়া।" },
+            rajshahi: { name: "রাজশাহী বিভাগ", est: "১৮২৯ সাল", distCount: "৮ টি", area: "১৮,১৯৭ বর্গ কিমি", pop: "২,০৩,৫৩,১১৭ জন", dists: "রাজশাহী, নাটোর, নওগাঁ, চাঁপাইনবাবগঞ্জ, পাবনা, সিরাজগঞ্জ, বগুড়া, জয়পুরহাট।" },
+            khulna: { name: "খুলনা বিভাগ", est: "১৯৬০ সাল", distCount: "১০ টি", area: "২২,২৮৫ বর্গ কিমি", pop: "১,৭৪,১৬,৬৪৫ জন", dists: "খুলনা, বাগেরহাট, সাতক্ষীরা, যশোর, মাগুরা, ঝিনাইদহ, নড়াইল, কুষ্টিয়া, চুয়াডাঙ্গা, মেহেরপুর।" },
+            barishal: { name: "বরিশাল বিভাগ", est: "১৯৯৩ সাল", distCount: "৬ টি", area: "১৩,২২৫ বর্গ কিমি", pop: "৯১,০০,১০২ জন", dists: "বরিশাল, বরগুনা, ভোলা, ঝালকাঠি, পটুয়াখালী, পিরোজপুর।" },
+            sylhet: { name: "সিলেট বিভাগ", est: "১৯৯৫ সাল", distCount: "৪ টি", area: "১২,৫৯৫ বর্গ কিমি", pop: "১,১৪,১৫,০৭৪ জন", dists: "সিলেট, মৌলভীবাজার, হবিগঞ্জ, সুনামগঞ্জ।" },
+            rangpur: { name: "রংপুর বিভাগ", est: "২০১০ সাল", distCount: "৮ টি", area: "১৬,১৮৪ বর্গ কিমি", pop: "১,৭৬,১৪,৫৯৭ জন", dists: "রংপুর, দিনাজপুর, কুড়িগ্রাম, গাইবান্ধা, নীলফামারী, পঞ্চগড়, ঠাকুরগাঁও, লালমনিরহাট।" },
+            mymensingh: { name: "ময়মনসিংহ বিভাগ", est: "২০১৫ সাল", distCount: "৪ টি", area: "১০,৫৮৪ বর্গ কিমি", pop: "১,২২,২১,৬৭৭ জন", dists: "ময়মনসিংহ, জামালপুর, শেরপুর, নেত্রকোণা।" }
+        };
+
+        // Function to show details on click
+        function showDetails(divId) {
+            // ১. ডেটা নিয়ে আসা
+            const data = divisionData[divId];
+            
+            // ২. HTML এলিমেন্টে ডেটা বসানো
+            document.getElementById('div-name').innerText = data.name;
+            document.getElementById('div-established').innerText = data.est;
+            document.getElementById('div-districts').innerText = data.distCount;
+            document.getElementById('div-area').innerText = data.area;
+            document.getElementById('div-population').innerText = data.pop;
+            document.getElementById('div-district-names').innerText = data.dists;
+
+            // ৩. ডিফল্ট মেসেজ লুকিয়ে ইনফো প্যানেল দেখানো
+            document.getElementById('default-message').classList.add('hidden');
+            document.getElementById('info-panel').classList.remove('hidden');
+
+            // ৪. ম্যাপে সিলেক্ট হওয়া বিভাগকে হাইলাইট করা
+            document.querySelectorAll('.division-path').forEach(path => {
+                path.classList.remove('active-division');
+            });
+            document.getElementById(divId).classList.add('active-division');
+        }
+    </script>
+</body>
+</html>
+  
