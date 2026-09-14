@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বাংলাদেশের ইন্টারেক্টিভ মানচিত্র</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS for Map Hover and Active states -->
+    <style>
+        .division-path { 
+            transition: fill 0.3s ease, transform 0.3s ease; 
+            cursor: pointer; 
+        }
+        .division-path:hover { 
+            fill: #10b981; /* Tailwind emerald-500 */ 
+            transform: scale(1.01);
+        }
+        .active-division { 
+            fill: #059669 !important; /* Tailwind emerald-600 */ 
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+    <!-- Header Section -->
+    <header class="bg-green-700 text-white p-5 shadow-md text-center">
+        <h1 class="text-3xl font-bold">বাংলাদেশের বিভাগীয় মানচিত্র</h1>
+        <p class="text-sm mt-2 text-green-100">যেকোনো বিভাগে ক্লিক করে বিস্তারিত তথ্য জানুন</p>
+    </header>
